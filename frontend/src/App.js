@@ -332,6 +332,38 @@ function App() {
               </div>
             </div>
           )}
+
+          {/* Developer Credits */}
+          <div className="mt-12 pt-8 border-t border-[#E5E7EB]" data-testid="developer-credits">
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Chivo, sans-serif' }}>Development Team</h3>
+              <p className="text-xs tracking-[0.2em] uppercase font-bold text-[#0A0A0A]/70 mb-6" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                BCA/MCA Academic Project 2026
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <div className="border border-[#E5E7EB] bg-white p-4" data-testid="developer-mridul">
+                <h4 className="font-bold text-sm mb-1" style={{ fontFamily: 'Chivo, sans-serif' }}>Mridul Purohit</h4>
+                <p className="text-xs uppercase tracking-wider text-[#0A0A0A]/70" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>UI/UX Design</p>
+              </div>
+              
+              <div className="border border-[#E5E7EB] bg-white p-4" data-testid="developer-hemant">
+                <h4 className="font-bold text-sm mb-1" style={{ fontFamily: 'Chivo, sans-serif' }}>Hemant Mamgai</h4>
+                <p className="text-xs uppercase tracking-wider text-[#0A0A0A]/70" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>Backend Development & API Integration</p>
+              </div>
+              
+              <div className="border border-[#E5E7EB] bg-white p-4" data-testid="developer-karan">
+                <h4 className="font-bold text-sm mb-1" style={{ fontFamily: 'Chivo, sans-serif' }}>Karan Shahi</h4>
+                <p className="text-xs uppercase tracking-wider text-[#0A0A0A]/70" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>Frontend Development & Database Management</p>
+              </div>
+              
+              <div className="border border-[#E5E7EB] bg-white p-4" data-testid="developer-siddharth">
+                <h4 className="font-bold text-sm mb-1" style={{ fontFamily: 'Chivo, sans-serif' }}>Siddharth Bisht</h4>
+                <p className="text-xs uppercase tracking-wider text-[#0A0A0A]/70" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>Testing, Documentation & Deployment</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

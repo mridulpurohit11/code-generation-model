@@ -1,0 +1,82 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "vibe": "Objective, rigid, functional, academic, authoritative",
+  "typography": {
+    "headings": "Chivo",
+    "body": "IBM Plex Sans",
+    "monospace": "JetBrains Mono",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl tracking-tight font-black",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "body": "text-base leading-relaxed",
+      "labels": "text-xs tracking-[0.2em] uppercase font-bold"
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F8F9FA",
+    "foreground": "#0A0A0A",
+    "primary": "#002FA7",
+    "primary_foreground": "#FFFFFF",
+    "border": "#E5E7EB",
+    "code_bg": "#0A0A0A",
+    "code_text": "#E5E7EB",
+    "error": "#FF3333"
+  },
+  "layout": {
+    "strategy": "Split-pane control room",
+    "container": "flex flex-col lg:flex-row h-screen w-full overflow-hidden bg-white text-[#0A0A0A]",
+    "left_pane": "w-full lg:w-5/12 h-full overflow-y-auto border-r border-border bg-[#F8F9FA] p-6 lg:p-12",
+    "right_pane": "w-full lg:w-7/12 h-full flex flex-col overflow-y-auto bg-white p-6 lg:p-12",
+    "spacing_scale": "p-4, p-6, p-8, p-12",
+    "borders": "1px solid #E5E7EB, sharp corners (rounded-none or rounded-sm)"
+  },
+  "components": {
+    "buttons": "Flat, sharp edges, high contrast. Primary: bg-[#002FA7] text-white hover:bg-[#0A0A0A]. Secondary: border border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#F8F9FA]",
+    "inputs": "Shadcn Textarea and Input, sharp edges, focus:ring-2 focus:ring-[#002FA7] focus:border-transparent",
+    "cards": "border border-border bg-white rounded-none shadow-sm",
+    "accordion": "For documentation viewer. Clean lines, border-b only, bold titles. Use Shadcn Accordion.",
+    "code_block": "Terminal look. bg-[#0A0A0A] text-white p-6 font-mono text-sm overflow-x-auto relative. Must include 'Copy' button in top right.",
+    "badges": "For example prompts. border border-border text-xs uppercase tracking-wider bg-white hover:bg-[#F8F9FA] cursor-pointer rounded-none px-3 py-1"
+  },
+  "motion": {
+    "hover": "Subtle background color shifts, crisp and immediate. No bouncy animations.",
+    "loading": "Typewriter effect for code generation, or a brutalist indeterminate progress bar.",
+    "transitions": "transition-colors duration-200 ease-in-out"
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/1f943d2f-3ffc-439a-9e29-6c4d4f0888f7/images/7fe2f73e875788c1208606d5f711160eaceaaeb0d623f89555818bc96584b3ec.png",
+      "description": "Minimalist architectural representation of AI. Use as the cover image in the documentation section (Left Pane) or a welcome card.",
+      "category": "hero"
+    },
+    "abstract_matrix": {
+      "url": "https://images.unsplash.com/photo-1741795990628-7ec99d7d2044?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGNvZGUlMjBtYXRyaXh8ZW58MHx8fHwxNzc1ODE5NzMzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Blue glowing digital lines. Can be used as a subtle overlay texture in the code generator empty state.",
+      "category": "texture"
+    }
+  },
+  "specific_instructions_for_main_agent": [
+    "Build a dual-pane hybrid application layout: Left pane for the Academic Project Documentation, Right pane for the LLM Code Generator workspace.",
+    "In the Left Pane, generate and display all required academic sections: Abstract, Introduction, Objectives, Literature Review, Methodology, System Architecture, Tools and Technologies, Implementation, Advantages and Limitations, Future Scope, and Conclusion. Use a Shadcn Accordion or structured article layout for readability.",
+    "Add a 'Download Documentation' button (e.g., simulated PDF download or print trigger) in the documentation pane header.",
+    "In the Right Pane, build the interactive Code Generation interface.",
+    "Include a 'Programming Language Selector' (e.g., Python, JavaScript) using Shadcn Select.",
+    "Include a Natural Language Input Field (Textarea) and an 'Example Prompts Gallery' (clickable badges) below it to auto-fill the textarea.",
+    "Implement a mock OpenAI service (or use a real API if key is provided) to simulate natural language to code generation with a realistic processing delay.",
+    "Render the generated code using 'react-syntax-highlighter' or a custom pre/code block with a dark theme (Terminal look) to contrast the light UI.",
+    "Include a 'Copy Generated Code' button inside the code display.",
+    "Below the code output, render a 'Code Explanation Section' simulating the LLM's explanation of the logic, with comments referenced.",
+    "Ensure the design strictly follows 'Swiss & High-Contrast' principles (Archetype 4): sharp edges, 1px borders, high contrast, minimal unnecessary shadows. Use #002FA7 for the primary action button.",
+    "Install and use Google Fonts: Chivo (headings), IBM Plex Sans (body), JetBrains Mono (code).",
+    "CRITICAL: All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='generate-btn').",
+    "Use Phosphor Icons or lucide-react for interface icons.",
+    "Ensure the application is desktop-optimized but responsive (stack panes on mobile)."
+  ],
+  "accessibility": {
+    "contrast": "Ensure all text against #F8F9FA or #FFFFFF backgrounds has a minimum contrast ratio of 4.5:1.",
+    "focus": "All interactive elements must have a visible focus ring (e.g., focus:ring-2 focus:ring-[#002FA7] focus:outline-none)."
+  }
+}
